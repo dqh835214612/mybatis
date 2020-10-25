@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.deng.mybatis.mapper.UserMapper">
+	<select id="getUserById" resultType="com.deng.mybatis.entity.User">
+        select
+            id,name,
+            age,update_time as updateTime,
+            update_name as updateName,
+            create_time as createTime,
+            create_name as createName
+        from
+            user
+        where
+            id = #{id}
+    </select>
+
+
+</mapper>
+
+
