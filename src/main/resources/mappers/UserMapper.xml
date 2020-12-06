@@ -16,6 +16,17 @@
             id = #{id}
     </select>
 
+    <select id="getUserAll" resultType="com.deng.mybatis.entity.User">
+        select
+            id,name,
+            age,create_time as createTime
+        from
+            user
+        order by
+        create_time
+
+    </select>
+
 
 </mapper>
 
